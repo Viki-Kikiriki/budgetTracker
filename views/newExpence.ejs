@@ -1,0 +1,21 @@
+<%- include("header") %>
+
+<div class="newExpence">
+    <form action="/new" method="post">
+        <div>
+            <label for="typeOfExpence">Type of Expence:</label></br>
+            <input type="text" placeholder="Grocery/Bills/Party" id="typeOfExpence" name="typeOfExpence">
+        </div>
+        <div>
+            <label for="expenceAmount">Amount:</label></br>
+            <input type="number" step="0.01" name="expenceAmount" id="expenceAmount">
+        </div>
+        <div>
+            <label for="expenceDate">Date:</label></br>
+            <input type="date" name="expenceDate" id="expenceDate">
+        </div>
+        <button class="btn btn-dark" type="submit" name="button">Submit</button>
+    </form>
+</div>
+
+<%- include("footer") %> 

@@ -1,0 +1,183 @@
+/* DISPLAY OF THE PAGE */
+
+html{
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+ 
+body{
+    background-color: #e7dfd5;
+    height: 100vh;
+}
+main{
+     flex-grow: 1;
+ }
+
+header, footer{
+    flex-grow: 0;
+}
+
+.wrapper{
+     min-height: 100%;
+     display: flex;
+     flex-direction: column;
+ }
+
+/* SETTING THE STYLE */
+
+h1{
+    padding: 50px;
+    color: #252e33;
+}
+
+.container{
+    margin: 100px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    padding-right: 60px;
+}
+
+.buttons a{
+    width: 150px;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    text-decoration: none;
+    background-color: #3b6978;
+    color: #e7dfd5;
+}
+
+.buttons a:hover{
+    background-color: #b3cacc;
+    box-shadow: 0 0 0 2px #3b6978;
+    border: none;
+    color: #3b6978;
+    font-weight: 500;
+}
+
+.displays{
+    border-left: 2px solid #252e33;
+    padding-left: 60px;
+}
+
+.displays p{
+    margin: 15px;
+    color: #3b6978;
+    font-weight: 500;
+}
+
+.thisMonth, .remainingMoney{
+    width: 200px;
+    height: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 0 2px #3b6978;
+    background-color: #b3cacc;
+    color: #3b6978;
+    font-weight: 500;
+}
+
+/* SETTING THE ICONS */
+
+.fa-heart{
+    color: #710C04;
+}
+
+.fa-hand-holding-usd{
+    color: #3b6978;
+}
+
+
+/* SETTING THE ADD PAGE */
+
+.addMoney{
+    margin: 50px auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+label{
+    margin: 15px;
+    font-size: 1.2rem;
+    color: #3b6978;
+    font-weight: 500;
+}
+
+input::placeholder{
+    text-align: center;
+    color: #3b6978;
+
+}
+input{
+    text-align:center;
+    height: 50px;
+    border: none;
+    box-shadow: 0 0 0 2px #3b6978;
+    background-color: #b3cacc;
+    color: #3b6978;
+    font-weight: 500;
+    border-radius: 12px;
+}
+
+.addMoney button, .newExpence button{
+    margin-top: 35px;
+    border-radius: 12px;
+    background-color: #3b6978;
+    border: none;
+    color: #e7dfd5;
+}
+
+.addMoney button:hover, .newExpence button:hover {
+    box-shadow: 0 0 0 2px #3b6978;
+    background-color: #b3cacc;
+    color: #3b6978;
+    font-weight: 500;
+}
+
+.thisMonth, .remainingMoney{
+    padding-top: 6px;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px #3b6978;
+}
+
+table{
+    background-color: #3b6978;
+}
+
+th{
+    background-color: #649dad !important;
+    color: #252e33;
+    font-weight: 800;
+}
+
+tr{
+    color: #e7dfd5;
+    font-weight: 500;
+    border-bottom-width: 0;
+}
+
+
+.table>:not(caption)>*>*{
+    border-bottom-width: 0;
+}

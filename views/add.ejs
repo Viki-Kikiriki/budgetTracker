@@ -1,0 +1,21 @@
+<%- include("header") %>
+<div class="addMoney">
+    <form action="/added" method="post">
+        <div>
+            <label for="formOfPayment">Form of payment:</label></br>
+            <input type="text" placeholder="Salary/Gift/Found" id="formOfPayment" name="formOfPayment" autocomplete="off">
+        </div>
+        <div>
+            <label for="amountOfPayment">Amount of payment:</label></br>
+            <input type="number" step="0.01" name="amountOfPayment" id="amountOfPayment">
+        </div>
+        <div>
+            <label for="dateOfPayment">Date of payment:</label></br>
+            <input type="date" name="dateOfPayment" id="dateOfPayment">
+        </div>
+        <button class="btn" type="submit" name="button">Submit</button>
+    </form>
+</div>
+  
+
+<%- include("footer") %> 

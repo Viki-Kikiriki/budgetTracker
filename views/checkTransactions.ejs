@@ -1,0 +1,27 @@
+<%- include("header") %>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Type</th>
+                <th scope="col">Payment/Expence</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% listItems.forEach(function(item){ %>
+                <% const isoDate = item.date %>
+                <% const options = {year: 'numeric', month: 'numeric', day: 'numeric' }; %>
+                <% const shortDate = isoDate.toLocaleDateString(undefined, options); %>
+                <tr scope="row">
+                    <td> <%= shortDate %></td>
+                    <td> <%= item.amount %> </td>
+                    <td> <%= item.type %> </td>
+                    <td> <%= item.value %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+<%- include("footer") %> 

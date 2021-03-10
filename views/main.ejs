@@ -1,0 +1,32 @@
+<%- include("header") %>
+<div class="container">
+    <div class="buttons">
+        <a href="/add" role="button" class="btn">Add <i class="far fa-money-bill-alt fa-lg"></i></a>
+        <a href="/new" role="button" class="btn">New Expence</a>
+        <a href="/all" role="button" class="btn">Transactions</a>
+    </div>
+    <div class="displays">
+        <% let expenceSum = 0; %>
+        <% let paymentSum = 0; %>
+        <% transactionList.forEach(function(item){ %>
+        <%    const transactionMonth = item.date.getMonth() %>
+        <%    if(item.value === "Expence" && thisMonth === transactionMonth){ %>
+        <%        expenceSum += item.amount %>
+        <%    } else if(item.value === "Payment"){ %>
+        <%            paymentSum += item.amount; %>
+        <%      } %>
+        <% }) %>
+        <% paymentSum -= expenceSum %>
+        <p>This month's expences:</p>
+        <div class="thisMonth"> <%= expenceSum %></div>
+        <p>Remaining <i class="far fa-money-bill-alt fa-lg"></i></p>
+       
+        <div class="remainingMoney"> <%= paymentSum %></div>
+    </div>
+</div>
+
+
+
+
+
+<%- include("footer") %> 
